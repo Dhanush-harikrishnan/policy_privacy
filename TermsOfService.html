@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service</title>
+    <title>Terms of Service and Privacy Policy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,19 +12,58 @@
             margin: 0 auto;
             padding: 20px;
         }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: blue;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
     </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </head>
 <body>
-    <h1>Terms of Service</h1>
-    
-    <p>Last updated: [Date]</p>
-    
-    <h2>1. Agreement to Terms</h2>
-    <p>Please read these Terms of Service carefully before using our service.</p>
-    
-    <h2>2. Terms and Conditions</h2>
-    <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
-    
-    <!-- Additional terms sections would go here -->
+    <nav>
+        <a href="#" onclick="showSection('terms')">Terms of Service</a>
+        <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
+    </nav>
+
+    <section id="terms" class="active">
+        <h1>Terms of Service</h1>
+        <p>Last updated: [Date]</p>
+        <h2>1. Agreement to Terms</h2>
+        <p>Please read these Terms of Service carefully before using our service.</p>
+        <h2>2. Terms and Conditions</h2>
+        <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+        <!-- Additional terms sections would go here -->
+        <h2>Contact Us</h2>
+        <p>If you have any questions about our terms of service, please contact us at <a href="mailto:studyings115@gmail.com">studyings115@gmail.com</a>.</p>
+    </section>
+
+    <section id="privacy">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: 16/01/2025</p>
+        <h2>1. Introduction</h2>
+        <p>We value your privacy and are committed to protecting your personal data.</p>
+        <h2>2. Data Collection</h2>
+        <p>We may collect various types of information in connection with your use of our services.</p>
+        <!-- Additional privacy policy sections would go here -->
+        <h2>Contact Us</h2>
+        <p>If you have any questions about our privacy policy, please contact us at <a href="mailto:studyings115@gmail.com">studyings115@gmail.com</a>.</p>
+    </section>
 </body>
 </html>
